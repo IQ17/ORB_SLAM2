@@ -156,7 +156,7 @@ void Viewer::Run()
         {
             while(isStopped())
             {
-                usleep(3000);
+                Sleep(3);
             }
         }
 

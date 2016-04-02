@@ -79,10 +79,12 @@ void LoopClosing::Run()
 
         ResetIfRequested();
 
-        if(CheckFinish())
-            break;
+		if (CheckFinish())
+		{
+			break;
+		}
 
-        usleep(5000);
+        Sleep(5);
     }
 
     SetFinish();
@@ -413,8 +415,10 @@ void LoopClosing::CorrectLoop()
     {
         mbStopGBA = true;
 
-        while(!isFinishedGBA())
-            usleep(5000);
+		while (!isFinishedGBA())
+		{
+			Sleep(5);
+		}
 
         mpThreadGBA->join();
         delete mpThreadGBA;
@@ -423,7 +427,7 @@ void LoopClosing::CorrectLoop()
     // Wait until Local Mapping has effectively stopped
     while(!mpLocalMapper->isStopped())
     {
-        usleep(1000);
+        Sleep(1);
     }
 
     // Ensure current keyframe is updated
@@ -625,7 +629,7 @@ void LoopClosing::RequestReset()
         if(!mbResetRequested)
             break;
         }
-        usleep(5000);
+        Sleep(5);
     }
 }
 
@@ -663,7 +667,7 @@ void LoopClosing::RunGlobalBundleAdjustment(unsigned long nLoopKF)
 
             while(!mpLocalMapper->isStopped() && !mpLocalMapper->isFinished())
             {
-                usleep(1000);
+                Sleep(1);
             }
 
             // Get Map Mutex
