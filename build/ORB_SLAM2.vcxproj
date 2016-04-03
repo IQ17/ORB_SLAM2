@@ -350,6 +350,28 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>B50F0CFA-40A1-315E-835B-6BBC754C282C</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Converter.h" />
+    <ClInclude Include="..\include\Frame.h" />
+    <ClInclude Include="..\include\FrameDrawer.h" />
+    <ClInclude Include="..\include\Initializer.h" />
+    <ClInclude Include="..\include\KeyFrame.h" />
+    <ClInclude Include="..\include\KeyFrameDatabase.h" />
+    <ClInclude Include="..\include\LocalMapping.h" />
+    <ClInclude Include="..\include\LoopClosing.h" />
+    <ClInclude Include="..\include\Map.h" />
+    <ClInclude Include="..\include\MapDrawer.h" />
+    <ClInclude Include="..\include\MapPoint.h" />
+    <ClInclude Include="..\include\Optimizer.h" />
+    <ClInclude Include="..\include\ORBextractor.h" />
+    <ClInclude Include="..\include\ORBmatcher.h" />
+    <ClInclude Include="..\include\ORBVocabulary.h" />
+    <ClInclude Include="..\include\PnPsolver.h" />
+    <ClInclude Include="..\include\Sim3Solver.h" />
+    <ClInclude Include="..\include\System.h" />
+    <ClInclude Include="..\include\Tracking.h" />
+    <ClInclude Include="..\include\Viewer.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

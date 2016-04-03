@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="D:\workspace_github\ORB_SLAM2\src\System.cc">
@@ -66,5 +66,70 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{5729A44B-755F-38F3-B058-C86FA7876FF2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{48734430-b1b9-4333-b0e0-be033baba8a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Converter.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Frame.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FrameDrawer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Initializer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KeyFrame.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KeyFrameDatabase.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LocalMapping.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LoopClosing.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Map.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MapDrawer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MapPoint.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Optimizer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ORBextractor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ORBmatcher.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ORBVocabulary.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\PnPsolver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Sim3Solver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\System.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Tracking.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Viewer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
