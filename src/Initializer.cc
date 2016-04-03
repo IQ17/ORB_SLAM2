@@ -67,7 +67,6 @@ bool Initializer::Initialize(const Frame &CurrentFrame, const vector<int> &vMatc
     // Indices for minimum set selection
     vector<size_t> vAllIndices;
     vAllIndices.reserve(N);
-    vector<size_t> vAvailableIndices;
 
     for(int i=0; i<N; i++)
     {
@@ -79,6 +78,7 @@ bool Initializer::Initialize(const Frame &CurrentFrame, const vector<int> &vMatc
 
     DUtils::Random::SeedRandOnce(0);
 
+    vector<size_t> vAvailableIndices;
     for(int it=0; it<mMaxIterations; it++)
     {
         vAvailableIndices = vAllIndices;
@@ -504,14 +504,23 @@ bool Initializer::ReconstructF(vector<bool> &vbMatchesInliers, cv::Mat &F21, cv:
     int nMinGood = max(static_cast<int>(0.9*N),minTriangulated);
 
     int nsimilar = 0;
-    if(nGood1>0.7*maxGood)
-        nsimilar++;
-    if(nGood2>0.7*maxGood)
-        nsimilar++;
-    if(nGood3>0.7*maxGood)
-        nsimilar++;
-    if(nGood4>0.7*maxGood)
-        nsimilar++;
+	float threshold = 0.7f;
+	if (nGood1 > threshold*maxGood)
+	{
+		nsimilar++;
+	}
+	if (nGood2 > threshold*maxGood)
+	{
+		nsimilar++;
+	}
+	if (nGood3 > threshold*maxGood)
+	{
+		nsimilar++;
+	}
+	if (nGood4 > threshold*maxGood)
+	{
+		nsimilar++;
+	}
 
     // If there is not a clear winner or not enough triangulated points reject initialization
     if(maxGood<nMinGood || nsimilar>1)
@@ -889,8 +898,10 @@ int Initializer::CheckRT(const cv::Mat &R, const cv::Mat &t, const vector<cv::Ke
         vP3D[vMatches12[i].first] = cv::Point3f(p3dC1.at<float>(0),p3dC1.at<float>(1),p3dC1.at<float>(2));
         nGood++;
 
-        if(cosParallax<0.99998)
-            vbGood[vMatches12[i].first]=true;
+		if (cosParallax < 0.99998)
+		{
+			vbGood[vMatches12[i].first] = true;
+		}
     }
 
     if(nGood>0)
@@ -900,8 +911,10 @@ int Initializer::CheckRT(const cv::Mat &R, const cv::Mat &t, const vector<cv::Ke
         size_t idx = min(50,int(vCosParallax.size()-1));
         parallax = acos(vCosParallax[idx])*180/CV_PI;
     }
-    else
-        parallax=0;
+	else
+	{
+		parallax = 0;
+	}
 
     return nGood;
 }
@@ -920,12 +933,16 @@ void Initializer::DecomposeE(const cv::Mat &E, cv::Mat &R1, cv::Mat &R2, cv::Mat
     W.at<float>(2,2)=1;
 
     R1 = u*W*vt;
-    if(cv::determinant(R1)<0)
-        R1=-R1;
+	if (cv::determinant(R1) < 0)
+	{
+		R1 = -R1;
+	}
 
     R2 = u*W.t()*vt;
-    if(cv::determinant(R2)<0)
-        R2=-R2;
+	if (cv::determinant(R2) < 0)
+	{
+		R2 = -R2;
+	}
 }
 
 } //namespace ORB_SLAM

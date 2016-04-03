@@ -194,8 +194,10 @@ bool Viewer::isFinished()
 void Viewer::RequestStop()
 {
     unique_lock<mutex> lock(mMutexStop);
-    if(!mbStopped)
-        mbStopRequested = true;
+	if (!mbStopped)
+	{
+		mbStopRequested = true;
+	}
 }
 
 bool Viewer::isStopped()
@@ -209,8 +211,10 @@ bool Viewer::Stop()
     unique_lock<mutex> lock(mMutexStop);
     unique_lock<mutex> lock2(mMutexFinish);
 
-    if(mbFinishRequested)
-        return false;
+	if (mbFinishRequested)
+	{
+		return false;
+	}
     else if(mbStopRequested)
     {
         mbStopped = true;

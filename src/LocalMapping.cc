@@ -589,12 +589,16 @@ void LocalMapping::Release()
 {
     unique_lock<mutex> lock(mMutexStop);
     unique_lock<mutex> lock2(mMutexFinish);
-    if(mbFinished)
-        return;
+	if (mbFinished)
+	{
+		return;
+	}
     mbStopped = false;
     mbStopRequested = false;
-    for(list<KeyFrame*>::iterator lit = mlNewKeyFrames.begin(), lend=mlNewKeyFrames.end(); lit!=lend; lit++)
-        delete *lit;
+	for (list<KeyFrame*>::iterator lit = mlNewKeyFrames.begin(), lend = mlNewKeyFrames.end(); lit != lend; lit++)
+	{
+		delete *lit;
+	}
     mlNewKeyFrames.clear();
 
     cout << "Local Mapping RELEASE" << endl;

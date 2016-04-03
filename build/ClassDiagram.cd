@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ORB_SLAM2::Converter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAQABAACAAACAAAAAAAAAAAAAAAAACAEAAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Converter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::MapPoint" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAAGBAlWGAgAAAAAkQEECGQgaEBASgwhgKEkACBGs=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Frame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::KeyFrame" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>eIDAacDQHarQHIkIIlfDEDFcC5HWXCwg8cgopBQDkgA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Frame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Frame" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GABAFQC0BqBACIgiKFEDECAaAAUVwGQgUNAAhJQDkAE=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Frame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::ORBmatcher" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQJgAEAAAAAAAAAAgQCAQAAAAABACAAAQAACIIAgA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\ORBmatcher.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Tracking" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ORB_SLAM2::Tracking::eTrackingState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>D:\workspace_github\ORB_SLAM2\include\Viewer.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EUQAAcJgiGIyz0gGJAQIASiAEAQUQiAgB7goIQC5kIA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\FrameDrawer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Viewer" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEgAAQAQAgAAAAAIACCAAARQgADAIBIgABQACIo=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\FrameDrawer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::FrameDrawer" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQEEAAACAAAAQAkAAAAAAAEBAIEAAAgAAAAkBAAIAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\FrameDrawer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Map" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAQAAAABAEABAQCCAKAAQAAgBAAAACCQAMIAAAgAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Tracking.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::LocalMapping" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAEFAAUAgAgAAAACJQCYBYQFUAADAYhXgARQAEQo=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Tracking.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::LoopClosing" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAIIBEEIBCLUAAIAgAARACQ0AABkAKDAAyAwACwCECo=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Tracking.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::System" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="ORB_SLAM2::System::eSensor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>D:\workspace_github\ORB_SLAM2\include\Viewer.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIgAAgABIAARCAAQRAAAwCBAABMAQAAAbwAAAAEQEA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Tracking.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Initializer" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABDAAIAAAwAAEAAAAASIAIUBQAMCAAAAAAAABAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Initializer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Optimizer" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Optimizer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::KeyFrameDatabase" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAQAAAECAAAACAgAAAIAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\KeyFrame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::Sim3Solver" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAGBABimAQAAAsYAgCgArAIEokAYdAAACFQQARgQBAY=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\Sim3Solver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::MapDrawer" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIAAAwEAAEAMAIADAAAAAQAEAAAAAAAIQAAAABA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\MapDrawer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::ExtractorNode" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAgQAAAgAAAAAAAAAGgAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\ORBextractor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::ORBextractor" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADIAAAAAQQBAAABEMAABgCABAAAgUAAAAgAESAASEAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\ORBextractor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORB_SLAM2::PnPsolver" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SKWcUNAgpQCgAgIAAjgICAOABpAHiGACLESQADgGGs4=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\PnPsolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="ORB_SLAM2::ORBVocabulary" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\workspace_github\ORB_SLAM2\include\ORBVocabulary.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

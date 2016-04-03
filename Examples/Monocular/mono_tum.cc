@@ -33,6 +33,9 @@ using namespace std;
 void LoadImages(const string &strFile, vector<string> &vstrImageFilenames,
                 vector<double> &vTimestamps);
 
+cv::Mat read_image(const string& path, int mode);
+
+
 int main(int argc, char **argv)
 {
     if(argc != 4)
@@ -62,20 +65,12 @@ int main(int argc, char **argv)
 		cout << "Images in the sequence: " << nImages << endl << endl;
 
 		// Main loop
-		cv::Mat im;
 		for (int ni = 0; ni < nImages; ni++)
 		{
 			// Read image from file
-			im = cv::imread(string(argv[3]) + "/" + vstrImageFilenames[ni], CV_LOAD_IMAGE_UNCHANGED);
+			cv::Mat im = read_image(string(argv[3]) + "/" + vstrImageFilenames[ni], CV_LOAD_IMAGE_UNCHANGED);
+
 			double tframe = vTimestamps[ni];
-
-			if (im.empty())
-			{
-				cerr << endl << "Failed to load image at: "
-					<< string(argv[3]) << "/" << vstrImageFilenames[ni] << endl;
-				return 1;
-			}
-
 			std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
 			// Pass the image to the SLAM system
@@ -157,4 +152,16 @@ void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vecto
             vstrImageFilenames.push_back(sRGB);
         }
     }
+}
+
+cv::Mat read_image(const string& path, int mode)
+{
+	cv::Mat im = cv::imread(path, mode);
+
+	if (im.empty())
+	{
+		throw::runtime_error("In Main: Failed to load image at: " + path);
+	}
+
+	return im;
 }

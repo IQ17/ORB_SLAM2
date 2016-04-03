@@ -625,9 +625,11 @@ void LoopClosing::RequestReset()
     while(1)
     {
         {
-        unique_lock<mutex> lock2(mMutexReset);
-        if(!mbResetRequested)
-            break;
+			unique_lock<mutex> lock2(mMutexReset);
+			if (!mbResetRequested)
+			{
+				break;
+			}
         }
         Sleep(5);
     }

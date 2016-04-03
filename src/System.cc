@@ -145,12 +145,12 @@ cv::Mat System::TrackStereo(const cv::Mat &imLeft, const cv::Mat &imRight, const
 
     // Check reset
     {
-    unique_lock<mutex> lock(mMutexReset);
-    if(mbReset)
-    {
-        mpTracker->Reset();
-        mbReset = false;
-    }
+		unique_lock<mutex> lock(mMutexReset);
+		if(mbReset)
+		{
+			mpTracker->Reset();
+			mbReset = false;
+		}
     }
 
     return mpTracker->GrabImageStereo(imLeft,imRight,timestamp);
@@ -190,12 +190,12 @@ cv::Mat System::TrackRGBD(const cv::Mat &im, const cv::Mat &depthmap, const doub
 
     // Check reset
     {
-    unique_lock<mutex> lock(mMutexReset);
-    if(mbReset)
-    {
-        mpTracker->Reset();
-        mbReset = false;
-    }
+		unique_lock<mutex> lock(mMutexReset);
+		if(mbReset)
+		{
+			mpTracker->Reset();
+			mbReset = false;
+		}
     }
 
     return mpTracker->GrabImageRGBD(im,depthmap,timestamp);
@@ -235,12 +235,12 @@ cv::Mat System::TrackMonocular(const cv::Mat &im, const double &timestamp)
 
     // Check reset
     {
-    unique_lock<mutex> lock(mMutexReset);
-    if(mbReset)
-    {
-        mpTracker->Reset();
-        mbReset = false;
-    }
+		unique_lock<mutex> lock(mMutexReset);
+		if(mbReset)
+		{
+			mpTracker->Reset();
+			mbReset = false;
+		}
     }
 
     return mpTracker->GrabImageMonocular(im,timestamp);
