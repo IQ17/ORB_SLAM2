@@ -1369,12 +1369,13 @@ namespace DBoW2 {
 
 		// nodes
 		int expected_nodes = (int)((pow((double)m_k, (double)m_L + 1) - 1) / (m_k - 1));
-		m_nodes.reserve(expected_nodes);
+		m_nodes.resize(expected_nodes);
 
-		m_words.reserve(pow((double)m_k, (double)m_L + 1));
+		m_words.resize(pow((double)m_k, (double)m_L + 1));
 
-		m_nodes.resize(1);
-		m_nodes[0].id = 0;
+		int wid = 0;
+		int nid = 0;
+		m_nodes[nid].id = nid;
 		while (!f.eof())
 		{
 			string snode;
@@ -1382,8 +1383,7 @@ namespace DBoW2 {
 			stringstream ssnode;
 			ssnode << snode;
 
-			int nid = m_nodes.size();
-			m_nodes.resize(m_nodes.size() + 1);
+			nid++;
 			m_nodes[nid].id = nid;
 
 			int pid;
@@ -1393,25 +1393,22 @@ namespace DBoW2 {
 
 			int nIsLeaf;
 			ssnode >> nIsLeaf;
-
-			stringstream ssd;
-			for (int iD = 0; iD < F::L; iD++)
-			{
-				string sElement;
-				ssnode >> sElement;
-				ssd << sElement << " ";
-			}
-			F::fromString(m_nodes[nid].descriptor, ssd.str());
-
+			
 			ssnode >> m_nodes[nid].weight;
+
+			for (size_t times = 0; times < 3; times++)
+			{
+				auto descriptionStartPos = snode.find(' ');
+				snode = snode.substr(descriptionStartPos + 1);
+			}
+
+			F::fromString(m_nodes[nid].descriptor, snode);
 
 			if (nIsLeaf > 0)
 			{
-				int wid = m_words.size();
-				m_words.resize(wid + 1);
-
 				m_nodes[nid].word_id = wid;
 				m_words[wid] = &m_nodes[nid];
+				wid++;
 			}
 			else
 			{
@@ -1419,8 +1416,10 @@ namespace DBoW2 {
 			}
 		}
 
+		m_nodes.resize(nid);
+		m_words.resize(wid);
+		
 		return true;
-
 	}
 
 	// --------------------------------------------------------------------------

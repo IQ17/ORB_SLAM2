@@ -18,7 +18,7 @@
 * along with ORB-SLAM2. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
+#pragma once
 #ifndef SIM3SOLVER_H
 #define SIM3SOLVER_H
 

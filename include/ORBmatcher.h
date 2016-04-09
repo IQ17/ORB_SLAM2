@@ -18,7 +18,7 @@
 * along with ORB-SLAM2. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
+#pragma once
 #ifndef ORBMATCHER_H
 #define ORBMATCHER_H
 

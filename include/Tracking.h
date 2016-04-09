@@ -18,7 +18,7 @@
 * along with ORB-SLAM2. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
+#pragma once
 #ifndef TRACKING_H
 #define TRACKING_H
 

@@ -47,7 +47,7 @@
 * of the authors and should not be interpreted as representing official policies,
 *   either expressed or implied, of the FreeBSD Project
 */
-
+#pragma once
 #ifndef PNPSOLVER_H
 #define PNPSOLVER_H
 
