@@ -307,8 +307,10 @@ void Sim3Solver::ComputeSim3(cv::Mat &P1, cv::Mat &P2)
 
         ms12i = nom/den;
     }
-    else
-        ms12i = 1.0f;
+	else
+	{
+		ms12i = 1.0f;
+	}
 
     // Step 7: Translation
 
