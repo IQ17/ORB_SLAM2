@@ -1041,8 +1041,10 @@ static void computeDescriptors(const Mat& image, vector<KeyPoint>& keypoints, Ma
 void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPoint>& _keypoints,
                       OutputArray _descriptors)
 { 
-    if(_image.empty())
-        return;
+	if (_image.empty())
+	{
+		return;
+	}
 
     Mat image = _image.getMat();
     assert(image.type() == CV_8UC1 );
@@ -1057,10 +1059,14 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
     Mat descriptors;
 
     int nkeypoints = 0;
-    for (int level = 0; level < nlevels; ++level)
-        nkeypoints += (int)allKeypoints[level].size();
-    if( nkeypoints == 0 )
-        _descriptors.release();
+	for (int level = 0; level < nlevels; ++level)
+	{
+		nkeypoints += (int)allKeypoints[level].size();
+	}
+	if (nkeypoints == 0)
+	{
+		_descriptors.release();
+	}
     else
     {
         _descriptors.create(nkeypoints, 32, CV_8U);
@@ -1076,8 +1082,10 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
         vector<KeyPoint>& keypoints = allKeypoints[level];
         int nkeypointsLevel = (int)keypoints.size();
 
-        if(nkeypointsLevel==0)
-            continue;
+		if (nkeypointsLevel == 0)
+		{
+			continue;
+		}
 
         // preprocess the resized image
         Mat workingMat = mvImagePyramid[level].clone();
@@ -1093,9 +1101,11 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
         if (level != 0)
         {
             float scale = mvScaleFactor[level]; //getScale(level, firstLevel, scaleFactor);
-            for (vector<KeyPoint>::iterator keypoint = keypoints.begin(),
-                 keypointEnd = keypoints.end(); keypoint != keypointEnd; ++keypoint)
-                keypoint->pt *= scale;
+			for (vector<KeyPoint>::iterator keypoint = keypoints.begin(),
+				keypointEnd = keypoints.end(); keypoint != keypointEnd; ++keypoint)
+			{
+				keypoint->pt *= scale;
+			}
         }
         // And add the keypoints to the output
         _keypoints.insert(_keypoints.end(), keypoints.begin(), keypoints.end());

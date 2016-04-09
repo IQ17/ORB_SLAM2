@@ -101,7 +101,9 @@ namespace ORB_SLAM2
 		//Initialize the Viewer thread and launch
 		mpViewer = new Viewer(this, mpFrameDrawer, mpMapDrawer, mpTracker, strSettingsFile);
 		if (bUseViewer)
+		{
 			mptViewer = new thread(&Viewer::Run, mpViewer);
+		}
 
 		mpTracker->SetViewer(mpViewer);
 
@@ -215,40 +217,40 @@ namespace ORB_SLAM2
 		}
 
 		// Check mode change
-	{
-		unique_lock<mutex> lock(mMutexMode);
-		if (mbActivateLocalizationMode)
 		{
-			mpLocalMapper->RequestStop();
-
-			// Wait until Local Mapping has effectively stopped
-			while (!mpLocalMapper->isStopped())
+			unique_lock<mutex> lock(mMutexMode);
+			if (mbActivateLocalizationMode)
 			{
-				Sleep(1);
+				mpLocalMapper->RequestStop();
+
+				// Wait until Local Mapping has effectively stopped
+				while (!mpLocalMapper->isStopped())
+				{
+					Sleep(1);
+				}
+
+				mpTracker->InformOnlyTracking(true);
+				mbActivateLocalizationMode = false;
 			}
-
-			mpTracker->InformOnlyTracking(true);
-			mbActivateLocalizationMode = false;
+			if (mbDeactivateLocalizationMode)
+			{
+				mpTracker->InformOnlyTracking(false);
+				mpLocalMapper->Release();
+				mbDeactivateLocalizationMode = false;
+			}
 		}
-		if (mbDeactivateLocalizationMode)
+
+		// Check reset
 		{
-			mpTracker->InformOnlyTracking(false);
-			mpLocalMapper->Release();
-			mbDeactivateLocalizationMode = false;
+			unique_lock<mutex> lock(mMutexReset);
+			if (mbReset)
+			{
+				mpTracker->Reset();
+				mbReset = false;
+			}
 		}
-	}
 
-	// Check reset
-	{
-		unique_lock<mutex> lock(mMutexReset);
-		if (mbReset)
-		{
-			mpTracker->Reset();
-			mbReset = false;
-		}
-	}
-
-	return mpTracker->GrabImageMonocular(im, timestamp);
+		return mpTracker->GrabImageMonocular(im, timestamp);
 	}
 
 	void System::ActivateLocalizationMode()

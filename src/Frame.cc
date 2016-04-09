@@ -49,12 +49,18 @@ Frame::Frame(const Frame &frame)
      mvScaleFactors(frame.mvScaleFactors), mvInvScaleFactors(frame.mvInvScaleFactors),
      mvLevelSigma2(frame.mvLevelSigma2), mvInvLevelSigma2(frame.mvInvLevelSigma2)
 {
-    for(int i=0;i<FRAME_GRID_COLS;i++)
-        for(int j=0; j<FRAME_GRID_ROWS; j++)
-            mGrid[i][j]=frame.mGrid[i][j];
+	for (int i = 0; i < FRAME_GRID_COLS; i++)
+	{
+		for (int j = 0; j < FRAME_GRID_ROWS; j++)
+		{
+			mGrid[i][j] = frame.mGrid[i][j];
+		}
+	}
 
-    if(!frame.mTcw.empty())
-        SetPose(frame.mTcw);
+	if (!frame.mTcw.empty())
+	{
+		SetPose(frame.mTcw);
+	}
 }
 
 
@@ -179,6 +185,7 @@ Frame::Frame(const cv::Mat &imGray, const double &timeStamp, ORBextractor* extra
     mnId=nNextId++;
 
     // Scale Level Info
+	//WC: should not be copied to Frame
     mnScaleLevels = mpORBextractorLeft->GetLevels();
     mfScaleFactor = mpORBextractorLeft->GetScaleFactor();
     mfLogScaleFactor = log(mfScaleFactor);
@@ -188,12 +195,14 @@ Frame::Frame(const cv::Mat &imGray, const double &timeStamp, ORBextractor* extra
     mvInvLevelSigma2 = mpORBextractorLeft->GetInverseScaleSigmaSquares();
 
     // ORB extraction
-    ExtractORB(0,imGray);
+	ExtractORB(0, imGray);
 
     N = mvKeys.size();
 
-    if(mvKeys.empty())
-        return;
+	if (mvKeys.empty())
+	{
+		return;
+	}
 
     UndistortKeyPoints();
 
@@ -230,26 +239,36 @@ Frame::Frame(const cv::Mat &imGray, const double &timeStamp, ORBextractor* extra
 void Frame::AssignFeaturesToGrid()
 {
     int nReserve = 0.5f*N/(FRAME_GRID_COLS*FRAME_GRID_ROWS);
-    for(unsigned int i=0; i<FRAME_GRID_COLS;i++)
-        for (unsigned int j=0; j<FRAME_GRID_ROWS;j++)
-            mGrid[i][j].reserve(nReserve);
+	for (unsigned int i = 0; i < FRAME_GRID_COLS; i++)
+	{
+		for (unsigned int j = 0; j < FRAME_GRID_ROWS; j++)
+		{
+			mGrid[i][j].reserve(nReserve);
+		}
+	}
 
     for(int i=0;i<N;i++)
     {
         const cv::KeyPoint &kp = mvKeysUn[i];
 
         int nGridPosX, nGridPosY;
-        if(PosInGrid(kp,nGridPosX,nGridPosY))
-            mGrid[nGridPosX][nGridPosY].push_back(i);
+		if (PosInGrid(kp, nGridPosX, nGridPosY))
+		{
+			mGrid[nGridPosX][nGridPosY].push_back(i);
+		}
     }
 }
 
 void Frame::ExtractORB(int flag, const cv::Mat &im)
 {
-    if(flag==0)
-        (*mpORBextractorLeft)(im,cv::Mat(),mvKeys,mDescriptors);
-    else
-        (*mpORBextractorRight)(im,cv::Mat(),mvKeysRight,mDescriptorsRight);
+	if (flag == 0)
+	{
+		(*mpORBextractorLeft)(im, cv::Mat(), mvKeys, mDescriptors);
+	}
+	else
+	{
+		(*mpORBextractorRight)(im, cv::Mat(), mvKeysRight, mDescriptorsRight);
+	}
 }
 
 void Frame::SetPose(cv::Mat Tcw)
