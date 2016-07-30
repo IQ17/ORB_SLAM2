@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\workspace_github\ORB_SLAM2\build\CMakeFiles\5903c9faec47b1b1f012f0144a7b3c45\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{31159DD5-84B8-370E-8232-B79649BDD4CF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

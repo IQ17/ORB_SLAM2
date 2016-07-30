@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{B50F0CFA-40A1-315E-835B-6BBC754C282C}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\thirdparties\opencv2.4.11-src\opencv\build\include;D:\thirdparties\opencv2.4.11-src\opencv\build\include\opencv;D:\workspace_github\ORB_SLAM2;D:\workspace_github\ORB_SLAM2\include;D:\thirdparties\eigen-3.2.7-src;D:\thirdparties\Pangolin-src\include;D:\thirdparties\Pangolin-bin64\src\include;D:\thirdparties\Pangolin-bin64\external\glew\include;D:\workspace_github\ORB_SLAM2\Thirdparty\DBoW2\dbow2;D:\workspace_github\ORB_SLAM2\Thirdparty\g2o\g2o;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\thirdparties\opencv2.4.11-src\opencv\build\include;D:\thirdparties\opencv2.4.11-src\opencv\build\include\opencv;D:\workspace_github\ORB_SLAM2;D:\workspace_github\ORB_SLAM2\include;D:\thirdparties\eigen-3.2.7-src;D:\thirdparties\Pangolin-src\include;D:\thirdparties\Pangolin-bin64\src\include;D:\thirdparties\Pangolin-bin64\external\glew\include;D:\workspace_github\ORB_SLAM2\Thirdparty\DBoW2\dbow2;D:\workspace_github\ORB_SLAM2\Thirdparty\g2o\g2o;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\thirdparties\opencv2.4.11-src\opencv\build\include;D:\thirdparties\opencv2.4.11-src\opencv\build\include\opencv;D:\workspace_github\ORB_SLAM2;D:\workspace_github\ORB_SLAM2\include;D:\thirdparties\eigen-3.2.7-src;D:\thirdparties\Pangolin-src\include;D:\thirdparties\Pangolin-bin64\src\include;D:\thirdparties\Pangolin-bin64\external\glew\include;D:\workspace_github\ORB_SLAM2\Thirdparty\DBoW2\dbow2;D:\workspace_github\ORB_SLAM2\Thirdparty\g2o\g2o;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\thirdparties\opencv2.4.11-src\opencv\build\include;D:\thirdparties\opencv2.4.11-src\opencv\build\include\opencv;D:\workspace_github\ORB_SLAM2;D:\workspace_github\ORB_SLAM2\include;D:\thirdparties\eigen-3.2.7-src;D:\thirdparties\Pangolin-src\include;D:\thirdparties\Pangolin-bin64\src\include;D:\thirdparties\Pangolin-bin64\external\glew\include;D:\workspace_github\ORB_SLAM2\Thirdparty\DBoW2\dbow2;D:\workspace_github\ORB_SLAM2\Thirdparty\g2o\g2o;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\workspace_github\ORB_SLAM2\build\CMakeFiles\5903c9faec47b1b1f012f0144a7b3c45\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/workspace_github/ORB_SLAM2 -BD:/workspace_github/ORB_SLAM2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/workspace_github/ORB_SLAM2/build/CMakeFiles/5903c9faec47b1b1f012f0144a7b3c45/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfig.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfigVersion.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinTargets.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig-version.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-debug.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-release.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules.cmake;D:\workspace_github\ORB_SLAM2\CMakeLists.txt;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeSystem.cmake;D:\workspace_github\ORB_SLAM2\cmake_modules\FindEigen3.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\workspace_github\ORB_SLAM2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/workspace_github/ORB_SLAM2 -BD:/workspace_github/ORB_SLAM2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/workspace_github/ORB_SLAM2/build/CMakeFiles/5903c9faec47b1b1f012f0144a7b3c45/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfig.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfigVersion.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinTargets.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig-version.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-debug.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-release.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules.cmake;D:\workspace_github\ORB_SLAM2\CMakeLists.txt;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeSystem.cmake;D:\workspace_github\ORB_SLAM2\cmake_modules\FindEigen3.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\workspace_github\ORB_SLAM2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/workspace_github/ORB_SLAM2 -BD:/workspace_github/ORB_SLAM2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/workspace_github/ORB_SLAM2/build/CMakeFiles/5903c9faec47b1b1f012f0144a7b3c45/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfig.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfigVersion.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinTargets.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig-version.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-debug.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-release.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules.cmake;D:\workspace_github\ORB_SLAM2\CMakeLists.txt;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeSystem.cmake;D:\workspace_github\ORB_SLAM2\cmake_modules\FindEigen3.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\workspace_github\ORB_SLAM2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/workspace_github/ORB_SLAM2 -BD:/workspace_github/ORB_SLAM2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/workspace_github/ORB_SLAM2/build/CMakeFiles/5903c9faec47b1b1f012f0144a7b3c45/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfig.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinConfigVersion.cmake;D:\thirdparties\Pangolin-bin64\src\PangolinTargets.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig-version.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVConfig.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-debug.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules-release.cmake;D:\thirdparties\opencv2.4.11-src\opencv\build\x64\vc12\lib\OpenCVModules.cmake;D:\workspace_github\ORB_SLAM2\CMakeLists.txt;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;D:\workspace_github\ORB_SLAM2\build\CMakeFiles\3.4.3\CMakeSystem.cmake;D:\workspace_github\ORB_SLAM2\cmake_modules\FindEigen3.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\workspace_github\ORB_SLAM2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
